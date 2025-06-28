@@ -16,11 +16,12 @@ this is a beginner-friendly Python project that cracks MD5 hashes using two comm
 ---
 
 ## Project Structure
+```bash
 password-hash-cracker/
 ├── cracker.py # main script
 ├── wordlist.txt # sample wordlist for dictionary attack
 └── README.md # documentation
-
+```
 
 ---
 
@@ -43,21 +44,23 @@ Generates all combinations of letters and digits (up to a given length) and hash
 ## How to Run
 
 1. **Clone the repository**:
-
+```bash
 git clone https://github.com/niklausss2811000/password-hash-cracker.git
 cd password-hash-cracker
+```
 
 2. **Run the program**:
-
+```bash
 python3 cracker.py
-
+```
 3. **Follow the prompts**:
-
+```bash
 Enter the target MD5 hash
 
 Choose the attack mode: dictionary or brute
 
 Provide the wordlist file path (for dictionary attack), or enter the maximum password length (for brute-force attack)
+```
 
 
 
