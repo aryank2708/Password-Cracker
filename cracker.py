@@ -23,6 +23,7 @@ def brute_force_attack(target_hash, max_length=4):
     for length in range(1, max_length + 1):
         for guess in itertools.product(chars, repeat=length):
             word = ''.join(guess)
+            print("Trying:", word)
             if md5_hash(word) == target_hash:
                 return word
     return None
@@ -41,15 +42,15 @@ def main():
         max_len = int(input("Enter maximum password length (recommended ≤ 4): "))
         result = brute_force_attack(target_hash, max_len)
     else:
-        print("Invalid mode selected.")
+        print("Invalid option selected!")
         return
 
     end_time = time.time()
 
     if result:
-        print(f"[✓] Password found: {result}")
+        print(f"Password found: {result}")
     else:
-        print("[✗] Password not found.")
+        print("Password not found.")
 
     print(f"Time taken: {end_time - start_time:.2f} seconds")
 
